@@ -32,6 +32,8 @@ add_subdirectory(src)
 add_library(mstch
     ${mstch_SOURCES})
 
+set_property(TARGET mstch PROPERTY POSITION_INDEPENDENT_CODE ON)
+
 set_target_properties(mstch
     PROPERTIES VERSION ${mstch_VERSION}
                SOVERSION ${mstch_SOVERSION})
